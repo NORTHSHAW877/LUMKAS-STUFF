@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumka Nofemele - Marketing Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 3px solid #ff00e6;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .logo-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo-circle:nth-child(1) {
+            background: #00f7ff;
+            animation-delay: 0s;
+        }
+
+        .logo-circle:nth-child(2) {
+            background: #ff00e6;
+            animation-delay: 0.2s;
+        }
+
+        .logo-circle:nth-child(3) {
+            background: #ffd700;
+            animation-delay: 0.4s;
+        }
+
+        .logo-circle:nth-child(4) {
+            background: rgba(255, 0, 230, 0.5);
+            animation-delay: 0.6s;
+        }
+
+        .logo-circle:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0);
+            }
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            background: linear-gradient(135deg, #00f7ff, #ff00e6);
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: skewX(-20deg);
+            transition: left 0.5s ease;
+        }
+
+        .nav-item:hover::before {
+            left: 100%;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 0, 230, 0.5);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: linear-gradient(135deg, #00f7ff, #ff00e6);
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            color: #0a0a0a;
+        }
+
+        /* Hero Section */
+       .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 120px 20px 40px;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #00f7ff, #ff00e6, #ffd700, #00ff88);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 4s ease infinite;
+            text-shadow: 0 0 30px rgba(0, 247, 255, 0.5);
+            position: relative;
+        }
+
+       .hero .description {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.3s both, colorPulse 3s ease-in-out infinite;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00f7ff, #ff00e6, #ffd700, #00ff88, #00f7ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+        }
+
+        @keyframes colorPulse {
+            0%, 100% { 
+                background-position: 0% 50%;
+                filter: brightness(1);
+            }
+            50% { 
+                background-position: 100% 50%;
+                filter: brightness(1.2);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #ff00e6, #00f7ff);
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out 0.9s both;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(15px 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 0, 230, 0.6);
+        }
+
+        /* About Section */
+         .about {
+            padding: 0rem 0 2rem;
+            background: linear-gradient(135deg, #0a0a0a, #1a0a1a);
+            position: relative;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #00f7ff, #ff00e6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .about-text p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Brands Section */
+        .brands {
+            padding: 5rem 0;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            padding: 0 2rem;
+        }
+
+        .brand-item {
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.05), rgba(255, 0, 230, 0.05));
+            border: 2px solid transparent;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            transition: all 0.4s ease;
+            position: relative;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #00f7ff, #ff00e6, #ffd700) 1;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .brand-item:hover::before {
+            opacity: 1;
+        }
+
+        .brand-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.15), rgba(255, 0, 230, 0.15));
+            box-shadow: 0 15px 40px rgba(255, 0, 230, 0.4);
+        }
+
+       .brand-name {
+            font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #00f7ff, #ff00e6, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 3s ease infinite;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            line-height: 1.3;
+        }
+
+        /* Work Section */
+        .services {
+            padding: 5rem 0;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #ff00e6, #ffd700, #00f7ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 3s ease-in-out infinite;
+            font-weight: 900;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 5px;
+            background: linear-gradient(90deg, #ff00e6, #00f7ff);
+        }
+
+       /* Work Section Layouts */
+        .work-section {
+            padding: 3rem 0 6rem 0;
+            position: relative;
+        }
+        
+        .pr-section {
+            padding-bottom: 3rem;
+        }
+
+        .work-section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .work-section-header h3 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #ff00e6, #ffd700, #00f7ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .work-section-header p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .work-number {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(5rem, 10vw, 8rem);
+            font-weight: 900;
+            background: linear-gradient(45deg, #00f7ff, #ff00e6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.15;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .work-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .feature-tag {
+            background: linear-gradient(135deg, #ffd700, #ff00e6);
+            color: #0a0a0a;
+            padding: 0.6rem 1.2rem;
+            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-tag:hover {
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.6);
+        }
+
+      /* Copywriting: Two column layout */
+        .copywriting-visuals {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .copywriting-visuals .work-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .copywriting-visuals .brand-showcase {
+            height: 400px;
+            min-height: 400px;
+        }
+
+        /* Influencer Marketing: Grid layout - 4 cards then 3 cards */
+        .influencer-visuals {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); /* 12 column grid for flexibility */
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .influencer-visuals .work-card {
+            width: 100%;
+            max-width: none;
+        }
+
+        /* First row: 4 cards - each takes 3 columns (3x4=12) */
+        .influencer-visuals .work-card:nth-child(1),
+        .influencer-visuals .work-card:nth-child(2),
+        .influencer-visuals .work-card:nth-child(3),
+        .influencer-visuals .work-card:nth-child(4) {
+            grid-column: span 3;
+        }
+
+        /* Second row: 3 cards - each takes 4 columns (4x3=12) */
+        .influencer-visuals .work-card:nth-child(5),
+        .influencer-visuals .work-card:nth-child(6),
+        .influencer-visuals .work-card:nth-child(7) {
+            grid-column: span 4;
+        }
+
+        /* Ensure all images have the same height */
+        .influencer-visuals .brand-showcase {
+            min-height: 400px;
+            height: 400px;
+        }
+
+       /* PR: Grid layout - 3 cards then 2 cards */
+        .pr-visuals {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); /* 12 column grid for flexibility */
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pr-visuals .work-card {
+            width: 100%;
+            max-width: none;
+        }
+
+       /* First 3 cards - uniform size */
+        .pr-visuals .work-card:nth-child(1),
+        .pr-visuals .work-card:nth-child(2),
+        .pr-visuals .work-card:nth-child(3) {
+            grid-column: span 4;
+        }
+        
+        /* Last 2 cards - centered */
+        .pr-visuals .work-card:nth-child(4) {
+            grid-column: 3 / span 4;
+        }
+        
+        .pr-visuals .work-card:nth-child(5) {
+            grid-column: 7 / span 4;
+        }
+
+        /* Ensure all images have the same height */
+        .pr-visuals .brand-showcase {
+            min-height: 400px;
+            height: 400px;
+        }
+
+        .work-card {
+            position: relative;
+            width: 100%;
+        }
+
+        .work-visual {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.15), rgba(255, 0, 230, 0.15));
+            border: 3px solid;
+            border-image: linear-gradient(45deg, #00f7ff, #ff00e6, #ffd700) 1;
+            clip-path: polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px);
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+
+        .work-visual:hover::before {
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.3), rgba(255, 0, 230, 0.3));
+            box-shadow: 0 20px 50px rgba(255, 0, 230, 0.6);
+        }
+
+        /* Make links work properly with images */
+        .work-visual a {
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .work-visual a:hover .brand-image {
+            transform: scale(1.05);
+        }
+
+        .brand-showcase {
+            height: auto;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+            transition: transform 0.5s ease;
+            padding: 20px;
+        }
+
+        .work-visual:hover .brand-image {
+            transform: scale(1.05);
+        }
+
+        /* Wild Caption Styles */
+        .work-caption {
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        /* Copywriting captions - centered */
+        .copywriting-visuals .work-caption {
+            text-align: center;
+        }
+
+        .work-caption h4 {
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #00f7ff, #ff00e6, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 3s ease infinite;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        /* Align specific h4 headings */
+        .align-caption h4 {
+            min-height: 4.5rem;
+        }
+
+        /* Extra height for shorter headings */
+        .align-caption-extra h4 {
+            min-height: 3rem;
+        }
+
+        .work-caption p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            opacity: 0.85;
+            line-height: 1.6;
+            font-weight: 400;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Hanging indent for specific PR cards */
+        .hanging-indent p {
+            text-indent: -0.6em;
+            padding-left: 0.6em;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 2rem 0 5rem 0;
+            background: linear-gradient(135deg, #1a0a1a, #0a0a0a);
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #ff00e6, #ffd700, #00f7ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .contact p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(255, 0, 230, 0.1));
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #00f7ff, #ff00e6) 1;
+            clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 247, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 0;
+            background: #000;
+            text-align: center;
+            border-top: 3px solid #ff00e6;
+        }
+
+        footer p {
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(10px);
+                padding: 1rem;
+                z-index: 999;
+                border-top: 2px solid #ff00e6;
+            }
+
+            .nav-item {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .copywriting-visuals {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+         .influencer-visuals {
+                grid-template-columns: 1fr;
+            }
+
+            .influencer-visuals .work-card:nth-child(1),
+            .influencer-visuals .work-card:nth-child(2),
+            .influencer-visuals .work-card:nth-child(3),
+            .influencer-visuals .work-card:nth-child(4),
+            .influencer-visuals .work-card:nth-child(5),
+            .influencer-visuals .work-card:nth-child(6),
+            .influencer-visuals .work-card:nth-child(7) {
+                grid-column: span 1;
+            }
+
+            .influencer-visuals .brand-showcase {
+                min-height: 300px;
+                height: auto;
+            }
+
+            .pr-visuals {
+                grid-template-columns: 1fr;
+            }
+
+            .pr-visuals .work-card:nth-child(1),
+            .pr-visuals .work-card:nth-child(2),
+            .pr-visuals .work-card:nth-child(3),
+            .pr-visuals .work-card:nth-child(4),
+            .pr-visuals .work-card:nth-child(5) {
+                grid-column: span 1;
+            }
+
+            .pr-visuals .brand-showcase {
+                min-height: 300px;
+                height: auto;
+            }
+
+            .work-caption,
+            .influencer-visuals .work-caption,
+            .pr-visuals .work-caption {
+                text-align: center;
+            }
+
+            .brand-showcase {
+                min-height: 300px;
+            }
+
+            .shape {
+                width: 100px !important;
+                height: 100px !important;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .brands-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .brand-item {
+                padding: 1.5rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-circle"></div>
+                <div class="logo-circle"></div>
+                <div class="logo-circle"></div>
+                <div class="logo-circle"></div>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about" class="nav-item"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#work" class="nav-item"><i class="fa-solid fa-briefcase"></i> Work</a></li>
+                <li><a href="#contact" class="nav-item"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Lumka Nofemele</h1>
+                <p class="description">I connect brands with audiences through smart, innovative storytelling</p>
+                <a href="#contact" class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Let's Work Together</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h2>About Me</h2>
+                    <p>Vivacious copywriter and marketing strategist with over a decade of experience helping brands tell their stories and connect with audiences.</p>
+                    <p>Whether it's writing copy, developing PR campaigns, or guiding influencer collaborations, I approach every project with curiosity, creativity, and bold ideas. I believe great campaigns should surprise, inspire, and spark emotion; just like a mystery novel or the roar of a football crowd.</p>
+                    <p>I'm at my best when I'm bringing fresh, strategic energy to brands, whether that means building a presence from the ground up or reimagining how they connect with their audiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Brands I've Worked With</h2>
+            <div class="brands-grid">
+                 <div class="brand-item animate-on-scroll">
+                      <div class="brand-name">Avon</div>
+                 </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Nivea</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Libresse</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">DKNY</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Oreo</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Toblerone</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Amarula</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Eucerin</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">The Macallan</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Clover</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Oros</div>
+                </div>
+                <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Edgars</div>
+                </div>
+                 <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Aquelle</div>
+                </div>
+                 <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Capitec</div>
+                </div>
+                 <div class="brand-item animate-on-scroll">
+                    <div class="brand-name">Dark & Lovely</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- COPYWRITING SECTION -->
+    <section id="work" class="services">
+        <div class="container">
+            <div class="work-section copywriting-section animate-on-scroll">
+                <div class="work-section-header">
+                    <div class="work-number">01</div>
+                    <h3>Copywriting</h3>
+                    <p style="background: linear-gradient(90deg, #ff00e6, #ffd700); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">Copy that clicks, converts and makes you smile!</p>
+                    <div class="work-features">
+                        <span class="feature-tag">Brand Messages</span>
+                        <span class="feature-tag">Editorials</span>
+                        <span class="feature-tag">Press Releases</span>
+                        <span class="feature-tag">Website Content</span>
+                    </div>
+                </div>
+
+                <div class="copywriting-visuals">
+                    <div class="work-card">
+                       <a href="https://www.instagram.com/explore/search/keyword/?q=%23goldendelightexotics" target="_blank" rel="noopener noreferrer">
+                           <div class="work-visual">
+                              <div class="brand-showcase">
+                                  <img src="images/last1.webp" alt="Copywriting Work" class="brand-image">
+                              </div>
+                           </div>
+                       </a>
+                       <div class="work-caption">
+                            <h4>GOLDEN DELIGHT</h4>
+                             <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Mama G Digital Campaign<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                       <a href="https://www.instagram.com/reel/DDMGKcsJUfq/?hl=en" target="_blank" rel="noopener noreferrer">
+                           <div class="work-visual">
+                              <div class="brand-showcase">
+                                  <img src="images/SNOWFLAKE.webp" alt="Copywriting Work 2" class="brand-image">
+                              </div>
+                           </div>
+                       </a>
+                       <div class="work-caption">
+                            <h4>SNOWFLAKE</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Edited Snowflake Recipe Book<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFLUENCER MARKETING SECTION -->
+            <div class="work-section influencer-section animate-on-scroll">
+                <div class="work-section-header">
+                    <div class="work-number">02</div>
+                    <h3>Influencer Marketing</h3>
+                    <p style="background: linear-gradient(90deg, #ff00e6, #ffd700); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">Strategic influencer partnerships that amplify your brand's reach. I connect you with the right voices to reach your target audience authentically and effectively.</p>
+                    <div class="work-features">
+                        <span class="feature-tag">Partnership Strategy</span>
+                        <span class="feature-tag">Campaign Management</span>
+                        <span class="feature-tag">Influencer Recruitment</span>
+                        <span class="feature-tag">Creative Briefs</span>
+                    </div>
+                </div>
+
+                <div class="influencer-visuals">
+                    <!-- Card 1: NIVEA -->
+                    <div class="work-card">
+                        <a href="https://www.youtube.com/watch?v=NvIb5r4G9b0" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/influencer1.webp" alt="Influencer Campaign 1" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption">
+                            <h4>NIVEA</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Nivea Skinfluencer<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: EUCERIN -->
+                    <div class="work-card">
+                        <a href="https://startupmag.co.za/2021/09/nandi-madida-announces-new-partnership-with-eucerin-sa/" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/influencer2.webp" alt="Influencer Campaign 2" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption">
+                            <h4>EUCERIN</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Eucerin x Nandi Madida<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: TOBLERONE -->
+                    <div class="work-card">
+                        <a href="https://www.trbusiness.com/regional-news/international/travelisback-toblerone-stirs-nostalgia-with-digital-led-push-in-gifting-season/217148" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/last5.webp" alt="Influencer Campaign 3" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption">
+                            <h4>TOBLERONE</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Travel is back campaign<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: THE MACALLAN -->
+                    <div class="work-card">
+                        <a href="https://www.dfnionline.com/latest-news/macallan-hosts-immersive-experiential-event-harmony-collection-smooth-arabica-23-12-2022" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/maca3.webp" alt="Influencer Campaign 4" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption">
+                            <h4>THE MACALLAN</h4>
+                             <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • UK Influencer Event<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: CLOVER KRUSH -->
+                    <div class="work-card">
+                        <div class="work-visual">
+                            <div class="brand-showcase">
+                                <img src="images/influencer5cloverkrush.webp" alt="Influencer Campaign 5" class="brand-image">
+                            </div>
+                        </div>
+                        <div class="work-caption">
+                            <h4>#MeetMyNewKrush Campaign with CLOVER KRUSH</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • 293 Pieces of Authentic UGC<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: OROS -->
+                    <div class="work-card">
+                        <div class="work-visual">
+                            <div class="brand-showcase">
+                                <img src="images/influencer6oros.webp" alt="Influencer Campaign 6" class="brand-image">
+                            </div>
+                        </div>
+                        <div class="work-caption align-caption">
+                            <h4>#MixingItUpWithOros Campaign with OROS</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Smartie Award Winner
+                            </p>
+                        </div>
+                   </div>
+
+                    <!-- Card 7: DKNY -->
+                    <div class="work-card">
+                        <div class="work-visual">
+                            <div class="brand-showcase">
+                                <img src="images/influencer7dkny.webp" alt="Influencer Campaign 7" class="brand-image">
+                            </div>
+                        </div>
+                       <div class="work-caption align-caption">
+                            <h4>#DKNY Campaign with DKNY</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • R2 Million in Earned Media Value<br>
+                            </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PR SECTION -->
+            <div class="work-section pr-section animate-on-scroll">
+                <div class="work-section-header">
+                    <div class="work-number">03</div>
+                    <h3>Public Relations<br><span style="font-size: 0.85em;">& Marketing Campaigns</span></h3>
+                    <p style="background: linear-gradient(90deg, #ff00e6, #ffd700); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">Shaping your brand's reputation through bold PR moves, strong media relationships, and stories that get the right eyes on you.</p>
+                    <div class="work-features">
+                        <span class="feature-tag">Media Relations</span>
+                        <span class="feature-tag">PR Drops</span>
+                        <span class="feature-tag">Brand Strategy</span>
+                        <span class="feature-tag">Brand Event Activations</span>
+                    </div>
+                </div>
+
+                <div class="pr-visuals">
+                    <!-- Card 1: OREO CAFE QATAR -->
+                    <div class="work-card">
+                        <a href="https://www.prnewswire.com/apac/news-releases/a-world-first-for-the-worlds-number-one-cookie-oreo-cafe-opens-in-qatar-301801631.html" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/hamad PR.webp" alt="PR Campaign 1" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption hanging-indent">
+                            <h4>OREO CAFE QATAR CAMPAIGN</h4>
+                             <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • The first ever Oreo Cafe opened it's doors in Doha, Qatar<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: OREO AWARD -->
+                    <div class="work-card">
+                        <a href="https://moodiedavittreport.com/the-moodies-2023-travel-journey-omnichannel-awards-revealed" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/pr2.webp" alt="PR Campaign 2" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption hanging-indent">
+                            <h4>OREO CAFE SCOOPS AWARD!</h4>
+                             <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • The Oreo Cafe in Qatar is a winner in the Moodie Awards 2023<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: MONDELEZ -->
+                    <div class="work-card">
+                        <a href="https://moodiedavittreport.com/mondelez-world-travel-retail-reveals-evolved-category-vision" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/mond55.webp" alt="PR Campaign 3" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption align-caption-extra hanging-indent">
+                            <h4>MONDELEZ</h4>
+                              <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • MONDELEZ world travel retail category vision launch<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: AMARULA -->
+                    <div class="work-card">
+                        <a href="https://www.thedrinksbusiness.com/2022/10/distell-launches-amarula-chocolate-using-sustainable-african-cocoa/" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/amarula.webp" alt="PR Campaign 4" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption hanging-indent">
+                            <h4>DISTELL AMARULA CHOCOLATE CANNES 2022 LAUNCH</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Distell launches Amarula Chocolate liqueur using sustainable African cocoa<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: TOBLERONE -->
+                    <div class="work-card">
+                        <a href="https://www.trbusiness.com/regional-news/international/mondelez-wtr-initiative-empowers-cocoa-communities-in-ghana/227321" target="_blank" rel="noopener noreferrer">
+                            <div class="work-visual">
+                                <div class="brand-showcase">
+                                    <img src="images/pr5.webp" alt="PR Campaign 5" class="brand-image">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="work-caption align-caption">
+                            <h4>MONDELEZ WORLD TRAVEL RETAIL</h4>
+                             <p style="font-size: 0.95rem; line-height: 1.8; margin-top: 0.5rem;">
+                                • Travel retail made right activation<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="contact" class="contact">
+       <div class="container">
+           <div class="contact-content animate-on-scroll">
+               <h2>Let's Create Something Amazing</h2>
+               <div class="contact-info">
+                   <div class="contact-item">
+                       <span>📧</span>
+                       <a href="mailto:nofemele13@gmail.com" style="color: #fff; text-decoration: none;">nofemele13@gmail.com</a>
+                   </div>
+                   <div class="contact-item">
+                       <span>💼</span>
+                       <a href="https://www.linkedin.com/in/lumka-nofemele/" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: none;">LinkedIn Profile</a>
+                   </div>
+                </div>
+           </div>
+       </div>
+   </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lumka Nofemele. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">Site designed and maintained by Pumla Nofemele.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Close menu on scroll
+        window.addEventListener('scroll', function() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        }, false);
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate stats counter
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    animateCounter(statNumber);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const navLinks = document.getElementById('navLinks');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>
