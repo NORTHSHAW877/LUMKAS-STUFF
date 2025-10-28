@@ -1,4 +1,7 @@
 Lumka Nofemele - Marketing Manager Portfolio
+
+<img width="102" height="20" alt="image" src="https://github.com/user-attachments/assets/885092ba-bf12-4725-90c1-a18b580136e6" />
+
 A bold, modern portfolio website showcasing marketing expertise across copywriting, influencer marketing, and PR campaigns. Built with cutting-edge design featuring vibrant gradients, smooth animations, and an engaging user experience.
 🌟 Features
 
