@@ -65,6 +65,7 @@ Copywriting: Brand messaging, web content, creative direction
 Influencer Marketing: Campaign management, influencer recruitment
 PR & Marketing: Media relations, press drops, brand strategy
 
+
 5. Contact
 Easy-to-find email and LinkedIn links with hover effects
 Site Designer: Pumla Nofemele
